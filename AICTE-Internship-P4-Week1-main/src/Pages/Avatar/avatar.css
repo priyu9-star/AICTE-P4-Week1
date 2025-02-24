@@ -1,24 +1,31 @@
-.containerBox{
+.containerBox {
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.avatarBox{
+.avatarBox {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     flex-direction: column;
-
+    gap: 10px; /* Added spacing for better structure */
 }
 
-.avatar:hover{
-    border: 0.4rem solid blueviolet;
+.avatar {
+    transition: border 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
 
-    transition: 0.5s ease-in-out;
+.avatar:hover {
+    border: 0.4rem solid blueviolet;
+    transform: scale(1.1); /* Slight scaling effect on hover */
     cursor: pointer;
 }
 
-.selected{
-    border: 0.4rem solid blueviolet !important; 
+.selected {
+    border: 0.4rem solid blueviolet !important;
+    box-shadow: 0px 0px 10px rgba(138, 43, 226, 0.6); /* Added glowing effect */
+    transition: box-shadow 0.3s ease-in-out;
 }
-
